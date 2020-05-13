@@ -241,5 +241,83 @@ var dessert = [
             "en:distributor-labels",
             "en:made-in-france"
         ]
+    },
+    {
+        "name": "Ben & Jerrys - Cookie et Brownie",
+        "id": "0076840620036",
+        "nutriscore": "d",
+        "nutriments": {
+            "saturated-fat_100g": 6.9,
+            "fat_100g": 11,
+            "sodium_100g": 0.064,
+            "nutrition-score-fr_100g": 13,
+            "proteins_100g": 3.5,
+            "carbohydrates_100g": 27,
+            "sugars_100g": 23,
+            "salt_100g": 0.16,
+            "energy-kcal_100g": 933,
+            "energy-kcal_value": 223,
+            "energy_100g": 934,
+            "energy-kj_100g": 934,
+            "nova-group_100g": 4,
+            "fruits-estimate_100g": 0
+        },
+        "nutriscore_data": {
+            "fruits_vegetables_nuts_colza_walnut_olive_oils": 0,
+            "energy": 934,
+            "positive_points": 0,
+            "negative_points": 13,
+            "score": 13,
+            "sodium_points": 0,
+            "fiber_points": 0,
+            "sugars_points": 5,
+            "proteins_points": 2,
+            "energy_points": 2,
+            "saturated_fat_points": 6,
+            "fruits_vegetables_nuts_colza_walnut_olive_oils_points": 0
+        },
+        "origins": "",
+        "labels_tags": [
+            "en:fair-trade",
+            "en:fairtrade-international",
+            "en:green-dot",
+            "en:halal"
+        ]
+    },
+    {
+        "name": "Nutella",
+        "id": "4008400402222",
+        "nutriscore": "e",
+        "nutriments": {
+            "saturated-fat_100g": 11,
+            "fat_100g": 30.9,
+            "sodium_100g": 0.04,
+            "nutrition-score-fr_100g": 26,
+            "proteins_100g": 6.3,
+            "carbohydrates_100g": 57.5,
+            "sugars_100g": 56.3,
+            "salt_100g": 0.1,
+            "energy-kcal_100g": 2255,
+            "energy-kcal_value": 539,
+            "energy_100g": 2255,
+            "nova-group_100g": 4,
+            "fruits-estimate_100g": 13
+        },
+        "nutriscore_data": {
+            "fruits_vegetables_nuts_colza_walnut_olive_oils": 13,
+            "energy": 2255,
+            "positive_points": 0,
+            "negative_points": 26,
+            "score": 26,
+            "sodium_points": 0,
+            "fiber_points": 0,
+            "sugars_points": 10,
+            "proteins_points": 3,
+            "energy_points": 6,
+            "saturated_fat_points": 10,
+            "fruits_vegetables_nuts_colza_walnut_olive_oils_points": 0
+        },
+        "origins": "",
+        "labels_tags": []
     }
 ];
