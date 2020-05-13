@@ -87,7 +87,7 @@ class LabelCell extends React.Component {
     }
 
     isBio(labels) {
-        return labels != undefined && (labels.includes('en:fr-bio-01') || labels.includes('en:fr-bio-10'));
+        return labels != undefined && (labels.includes('en:fr-bio-01') || labels.includes('en:fr-bio-10') || labels.includes('en:ab-agriculture-biologique'));
     }
 
     render() {
