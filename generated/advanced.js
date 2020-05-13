@@ -138,7 +138,7 @@ var LabelCell = function (_React$Component4) {
     _createClass(LabelCell, [{
         key: "isBio",
         value: function isBio(labels) {
-            return labels != undefined && (labels.includes('en:fr-bio-01') || labels.includes('en:fr-bio-10'));
+            return labels != undefined && (labels.includes('en:fr-bio-01') || labels.includes('en:fr-bio-10') || labels.includes('en:ab-agriculture-biologique'));
         }
     }, {
         key: "render",
