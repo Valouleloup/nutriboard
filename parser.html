@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Nutriboard parser</title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <textarea id="input" onkeyup="parse(this)"></textarea>
+    <pre id="output"></pre>
+
+    <script>
+        function parse(e) {
+            var json = JSON.parse(e.value);
+
+            var result = {};
+            result['name'] = json.product['product_name'];
+            result['id'] = json.product['id'];
+            result['nutriscore'] = json.product['nutriscore_grade'];
+            result['nutriments'] = {};
+            result['nutriments']['fiber_100g'] = json.product['nutriments']['fiber_100g'];
+            result['nutriments']['saturated-fat_100g'] = json.product['nutriments']['saturated-fat_100g'];
+            result['nutriments']['fat_100g'] = json.product['nutriments']['fat_100g'];
+            result['nutriments']['sodium_100g'] = json.product['nutriments']['sodium_100g'];
+            result['nutriments']['nutrition-score-fr_100g'] = json.product['nutriments']['nutrition-score-fr_100g'];
+            result['nutriments']['proteins_100g'] = json.product['nutriments']['proteins_100g'];
+            result['nutriments']['vitamin-b9_100g'] = json.product['nutriments']['vitamin-b9_100g'];
+            result['nutriments']['carbohydrates_100g'] = json.product['nutriments']['carbohydrates_100g'];
+            result['nutriments']['sugars_100g'] = json.product['nutriments']['sugars_100g'];
+            result['nutriments']['salt_100g'] = json.product['nutriments']['salt_100g'];
+            result['nutriments']['energy-kcal_100g'] = json.product['nutriments']['energy-kcal_100g'];
+            result['nutriments']['energy-kcal_value'] = json.product['nutriments']['energy-kcal_value'];
+            result['nutriments']['energy_100g'] = json.product['nutriments']['energy_100g'];
+            result['nutriments']['energy-kj_100g'] = json.product['nutriments']['energy-kj_100g'];
+            result['nutriments']['nova-group_100g'] = json.product['nutriments']['nova-group_100g'];
+            result['nutriments']['fruits-estimate_100g'] = json.product['nutriments']['fruits-vegetables-nuts-estimate-from-ingredients_100g'];
+            result['nutriscore_data'] = {};
+            if(json.product['nutriscore_data'] != undefined) {
+                result['nutriscore_data']['fruits_vegetables_nuts_colza_walnut_olive_oils'] = json.product['nutriscore_data']['fruits_vegetables_nuts_colza_walnut_olive_oils'];
+                result['nutriscore_data']['energy'] = json.product['nutriscore_data']['energy'];
+                result['nutriscore_data']['positive_points'] = json.product['nutriscore_data']['positive_points'];
+                result['nutriscore_data']['negative_points'] = json.product['nutriscore_data']['negative_points'];
+                result['nutriscore_data']['score'] = json.product['nutriscore_data']['score'];
+                result['nutriscore_data']['sodium_points'] = json.product['nutriscore_data']['sodium_points'];
+                result['nutriscore_data']['fiber_points'] = json.product['nutriscore_data']['fiber_points'];
+                result['nutriscore_data']['sugars_points'] = json.product['nutriscore_data']['sugars_points'];
+                result['nutriscore_data']['proteins_points'] = json.product['nutriscore_data']['proteins_points'];
+                result['nutriscore_data']['energy_points'] = json.product['nutriscore_data']['energy_points'];
+                result['nutriscore_data']['saturated_fat_points'] = json.product['nutriscore_data']['saturated_fat_points'];
+                result['nutriscore_data']['fruits_vegetables_nuts_colza_walnut_olive_oils_points'] = json.product['nutriscore_data']['fruits_vegetables_nuts_colza_walnut_olive_oils_points'];
+            }
+            result['origins'] = json.product['origins_tags'].join();
+            result['labels_tags'] = json.product['labels_tags'];
+
+            var output = document.getElementById('output');
+            var resultJson = JSON.stringify(result, null, 2);
+            output.innerHTML = resultJson;
+        }
+    </script>
+</body>
+</html>
