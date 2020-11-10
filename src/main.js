@@ -30,7 +30,7 @@ class App extends React.Component {
 	getModeButtons() {
 		return [
 			<button key={1} onClick={this.switchMode.bind(this)} className={this.state.mode == 'simple' ? 'active' : ''}>Simple</button>,
-			<button key={2} onClick={this.switchMode.bind(this)} className={this.state.mode == 'advanced' ? 'active' : ''}>Avancé</button>
+			<button key={2} onClick={this.switchMode.bind(this)} className={this.state.mode == 'advanced' ? 'active' : ''}>Graph</button>
 		]
 
 	}
@@ -50,7 +50,7 @@ class App extends React.Component {
 
 	getTable(mode) {
 		return mode === 'advanced' ?
-			<AdvancedTable items={this.getItemList(this.state.type)}/> :
+			<GraphTable items={this.getItemList(this.state.type)}/> :
 			<SimpleTable items={this.getItemList(this.state.type)}/>;
 	}
 

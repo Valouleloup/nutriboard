@@ -55,7 +55,7 @@ var App = function (_React$Component) {
 			), React.createElement(
 				'button',
 				{ key: 2, onClick: this.switchMode.bind(this), className: this.state.mode == 'advanced' ? 'active' : '' },
-				'Avanc\xE9'
+				'Graph'
 			)];
 		}
 	}, {
@@ -77,7 +77,7 @@ var App = function (_React$Component) {
 	}, {
 		key: 'getTable',
 		value: function getTable(mode) {
-			return mode === 'advanced' ? React.createElement(AdvancedTable, { items: this.getItemList(this.state.type) }) : React.createElement(SimpleTable, { items: this.getItemList(this.state.type) });
+			return mode === 'advanced' ? React.createElement(GraphTable, { items: this.getItemList(this.state.type) }) : React.createElement(SimpleTable, { items: this.getItemList(this.state.type) });
 		}
 	}, {
 		key: 'render',
