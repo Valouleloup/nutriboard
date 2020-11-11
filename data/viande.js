@@ -174,7 +174,7 @@ var viande = [
         ]
     },
     {
-        "name": "Jambon supérieur à l'étouffée -25% de sel - Fleury Michon",
+        "name": "Jambon sup. à l'étouffée -25% de sel - Fleury Michon",
         "id": "3095757370015",
         "nutriscore": "b",
         "nutriments": {
