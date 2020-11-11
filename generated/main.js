@@ -16,7 +16,7 @@ var App = function (_React$Component) {
 
 		_this.state = {
 			active: 0,
-			mode: 'simple',
+			mode: 'advanced',
 			type: 'tous'
 		};
 		return _this;

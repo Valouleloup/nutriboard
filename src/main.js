@@ -4,7 +4,7 @@ class App extends React.Component {
 
 		this.state = {
 			active: 0,
-			mode: 'simple',
+			mode: 'advanced',
 			type: 'tous'
 		};
 	}
