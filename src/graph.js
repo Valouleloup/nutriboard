@@ -36,29 +36,24 @@ class GraphNutriscoreCell extends React.Component {
         this.state = {color: nutriscoreColorMapping[props.nutriscore]};
     }
 
-    getPlusOrMinus(nutripoint) {
-        if ([-15, -14, -13, -12, -11, -10, 0, 3, 4, 11, 12, 19, 20, 21].includes(nutripoint)) {
-            return '+';
-        }
-        if ([-5, -4, -3, -2, -1, 2, 9, 10, 17, 18].includes(nutripoint) || nutripoint > 25) {
-            return '-';
-        }
-    }
-
     getPoint(nutripoint) {
         return (nutripoint !== '') ? nutripoint : 25;
     }
 
     getSvg(points) {
-        var scale = 20;
+        var svgWidth = 800;
+        if (window.innerWidth < 1280) {
+            svgWidth = window.innerWidth - 480;
+        }
+        var scale = svgWidth / 40;
         var offsetLeft = 10;
         return (
-        <svg height="20" width="800">
-            <circle cx={(points*scale)+10*scale+offsetLeft} cy="12" r="6" stroke="black" strokeWidth="0" fill={this.state.color} />
+        <svg height="20" width={svgWidth}>
             <rect x={10*scale} y="4" width="1" height="20" fill="#ddd" strokeWidth="0" />
             <rect x={13*scale} y="4" width="1" height="20" fill="#ddd" strokeWidth="0" />
             <rect x={21*scale} y="4" width="1" height="20" fill="#ddd" strokeWidth="0" />
             <rect x={29*scale} y="4" width="1" height="20" fill="#ddd" strokeWidth="0" />
+            <circle cx={(points*scale)+10*scale+offsetLeft} cy="12" r="6" stroke="black" strokeWidth="0" fill={this.state.color} />
         </svg>
         );
     }

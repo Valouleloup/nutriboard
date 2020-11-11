@@ -89,16 +89,6 @@ var GraphNutriscoreCell = function (_React$Component2) {
     }
 
     _createClass(GraphNutriscoreCell, [{
-        key: "getPlusOrMinus",
-        value: function getPlusOrMinus(nutripoint) {
-            if ([-15, -14, -13, -12, -11, -10, 0, 3, 4, 11, 12, 19, 20, 21].includes(nutripoint)) {
-                return '+';
-            }
-            if ([-5, -4, -3, -2, -1, 2, 9, 10, 17, 18].includes(nutripoint) || nutripoint > 25) {
-                return '-';
-            }
-        }
-    }, {
         key: "getPoint",
         value: function getPoint(nutripoint) {
             return nutripoint !== '' ? nutripoint : 25;
@@ -106,16 +96,20 @@ var GraphNutriscoreCell = function (_React$Component2) {
     }, {
         key: "getSvg",
         value: function getSvg(points) {
-            var scale = 20;
+            var svgWidth = 800;
+            if (window.innerWidth < 1280) {
+                svgWidth = window.innerWidth - 480;
+            }
+            var scale = svgWidth / 40;
             var offsetLeft = 10;
             return React.createElement(
                 "svg",
-                { height: "20", width: "800" },
-                React.createElement("circle", { cx: points * scale + 10 * scale + offsetLeft, cy: "12", r: "6", stroke: "black", strokeWidth: "0", fill: this.state.color }),
+                { height: "20", width: svgWidth },
                 React.createElement("rect", { x: 10 * scale, y: "4", width: "1", height: "20", fill: "#ddd", strokeWidth: "0" }),
                 React.createElement("rect", { x: 13 * scale, y: "4", width: "1", height: "20", fill: "#ddd", strokeWidth: "0" }),
                 React.createElement("rect", { x: 21 * scale, y: "4", width: "1", height: "20", fill: "#ddd", strokeWidth: "0" }),
-                React.createElement("rect", { x: 29 * scale, y: "4", width: "1", height: "20", fill: "#ddd", strokeWidth: "0" })
+                React.createElement("rect", { x: 29 * scale, y: "4", width: "1", height: "20", fill: "#ddd", strokeWidth: "0" }),
+                React.createElement("circle", { cx: points * scale + 10 * scale + offsetLeft, cy: "12", r: "6", stroke: "black", strokeWidth: "0", fill: this.state.color })
             );
         }
     }, {
