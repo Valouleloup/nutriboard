@@ -46,6 +46,14 @@ var App = function (_React$Component) {
 			return keys;
 		}
 	}, {
+		key: 'getAlimentList',
+		value: function getAlimentList(type) {
+			if (type === 'tous') {
+				return aliments;
+			}
+			return { type: aliments[type] };
+		}
+	}, {
 		key: 'getModeButtons',
 		value: function getModeButtons() {
 			return [React.createElement(
@@ -77,25 +85,29 @@ var App = function (_React$Component) {
 	}, {
 		key: 'getTable',
 		value: function getTable(mode) {
-			return mode === 'advanced' ? React.createElement(GraphTable, { items: this.getItemList(this.state.type) }) : React.createElement(SimpleTable, { items: this.getItemList(this.state.type) });
+			return mode === 'advanced' ? React.createElement(GraphTable, { items: this.getItemList(this.state.type), aliments: this.getAlimentList(this.state.type) }) : React.createElement(SimpleTable, { items: this.getItemList(this.state.type), aliments: this.getAlimentList(this.state.type) });
 		}
 	}, {
 		key: 'render',
 		value: function render() {
 			return React.createElement(
 				'div',
-				null,
+				{ id: 'container' },
 				React.createElement(
 					'div',
-					{ className: 'modes' },
+					{ id: 'card', className: 'modes' },
 					this.getModeButtons()
 				),
 				React.createElement(
 					'div',
-					{ className: 'filters' },
+					{ id: 'card', className: 'filters' },
 					this.getFilterButtons()
 				),
-				this.getTable(this.state.mode)
+				React.createElement(
+					'div',
+					{ id: 'card' },
+					this.getTable(this.state.mode)
+				)
 			);
 		}
 	}]);
@@ -128,5 +140,21 @@ scores = scores.concat(addType(platCuisine, 'plat cuisiné'));
 scores = scores.concat(addType(boisson, 'boisson'));
 scores = scores.concat(addType(biscuits, 'biscuits'));
 scores = scores.concat(addType(apero, 'apéro'));
+
+var aliments = {};
+aliments['dessert'] = dessert;
+aliments['soupe'] = soupes;
+aliments['pain'] = pains;
+aliments['poisson'] = poissons;
+aliments['yaourt'] = yaourts;
+aliments['matiere-grasses'] = matieresGrasses;
+aliments['fromage'] = fromage;
+aliments['féculent'] = feculent;
+aliments['légumes'] = legumes;
+aliments['viande'] = viande;
+aliments['plat-cuisiné'] = platCuisine;
+aliments['boisson'] = boisson;
+aliments['biscuits'] = biscuits;
+aliments['apéro'] = apero;
 
 ReactDOM.render(React.createElement(App), document.getElementById('root'));

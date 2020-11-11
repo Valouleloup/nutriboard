@@ -4,20 +4,20 @@ class FoodTypeCell extends React.Component {
 
         // TODO mapping in separated class
         var typeColorMapping = {
-            "yaourt": "#e17b7b",
-            "fromage": "lemonchiffon",
-            "plat cuisiné": "deeppink",
-            "biscuits": "darkorange",
-            "féculent": "gold",
+            "yaourt": "#f28f8f",
+            "fromage": "#f2e2a0",
+            "plat cuisiné": "#ff7ac2",
+            "biscuits": "#ffba65",
+            "féculent": "#ffd075",
             "légumes": "green",
-            "viande": "crimson",
-            "poisson": "darkturquoise",
-            "boisson": "#89ff95",
-            "pain": "#edae44",
+            "viande": "#d9505c",
+            "poisson": "#78dfd1",
+            "boisson": "#95e89d",
+            "pain": "#ffbf7b",
             "apéro": "peru",
-            "dessert": "#ffe548",
-            "matières grasses": "#f9ff77",
-            "soupe" : "#e36031"
+            "dessert": "#fed78c",
+            "matières grasses": "#5d8f53",
+            "soupe" : "#f25767"
         };
 
         this.state = {color: typeColorMapping[props.type]};

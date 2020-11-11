@@ -27,6 +27,13 @@ class App extends React.Component {
 		return keys;
 	}
 
+	getAlimentList(type) {
+		if(type === 'tous') {
+			return aliments;
+		}
+		return {type: aliments[type]};
+	}
+
 	getModeButtons() {
 		return [
 			<button key={1} onClick={this.switchMode.bind(this)} className={this.state.mode == 'simple' ? 'active' : ''}>Simple</button>,
@@ -50,20 +57,22 @@ class App extends React.Component {
 
 	getTable(mode) {
 		return mode === 'advanced' ?
-			<GraphTable items={this.getItemList(this.state.type)}/> :
-			<SimpleTable items={this.getItemList(this.state.type)}/>;
+			<GraphTable items={this.getItemList(this.state.type)} aliments={this.getAlimentList(this.state.type)}/> :
+			<SimpleTable items={this.getItemList(this.state.type)} aliments={this.getAlimentList(this.state.type)}/>;
 	}
 
 	render() {
 		return (
-			<div>
-				<div className="modes">
+			<div id="container">
+				<div id="card" className="modes">
 					{this.getModeButtons()}
 				</div>
-				<div className="filters">
+				<div id="card" className="filters">
 					{this.getFilterButtons()}
 				</div>
+				<div id="card">
 				{this.getTable(this.state.mode)}
+				</div>
 			</div>
 		);
 	}
@@ -92,5 +101,22 @@ scores = scores.concat(addType(platCuisine, 'plat cuisiné'));
 scores = scores.concat(addType(boisson, 'boisson'));
 scores = scores.concat(addType(biscuits, 'biscuits'));
 scores = scores.concat(addType(apero, 'apéro'));
+
+var aliments = {};
+aliments['dessert'] = dessert;
+aliments['soupe'] = soupes;
+aliments['pain'] = pains;
+aliments['poisson'] = poissons;
+aliments['yaourt'] = yaourts;
+aliments['matiere-grasses'] = matieresGrasses;
+aliments['fromage'] = fromage;
+aliments['féculent'] = feculent;
+aliments['légumes'] = legumes;
+aliments['viande'] = viande;
+aliments['plat-cuisiné'] = platCuisine;
+aliments['boisson'] = boisson;
+aliments['biscuits'] = biscuits;
+aliments['apéro'] = apero;
+
 
 ReactDOM.render(React.createElement(App), document.getElementById('root'));

@@ -3,12 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>NutriBoard</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
 	<style>
 		* {
 			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
+		}
+		body {
+			background-color: #ebeef6;
+		}
+		#container {
+			margin: auto;
+			max-width:1280px;
 		}
 		.filters {
 			margin: 10px 0;
+			text-align: center;
 		}
 		.filters button, .modes button {
 			padding:4px 8px;
@@ -21,13 +31,90 @@
 		.filters button.active {
 			background-color: #85BB2F;
 		}
+		.modes {
+			text-align: center;
+		}
 		.modes button.active {
 			background-color: #ff4a4a;
 		}
+		#card{
+			padding:10px;
+			background-color: #fff;
+			border-radius: 6px;
+			box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);
+		}
+		.category {
+			margin-top:10px;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+			width: 100%;
+			padding: 6px;
+			text-align: center;
+		}
+		#légumes-cat {
+			background-color: #10ca93;
+			color:#fff;
+		}
+		#dessert-cat {
+			background-color: #fed78c;
+			color:#fff;
+		}
+		#soupe-cat {
+			background-color: #f25767;
+			color:#fff;
+		}
+		#pain-cat {
+			background-color: #ffbf7b;
+			color:#fff;
+		}
+		#poisson-cat {
+			background-color: #78dfd1;
+			color:#fff;
+		}
+		#yaourt-cat {
+			background-color: #f28f8f;
+			color:#fff;
+		}
+		#fromage-cat {
+			background-color: #f2e2a0;
+			color:#fff;
+		}
+		#féculent-cat {
+			background-color: #ffd075;
+			color:#fff;
+		}
+		#matiere-grasses-cat {
+			background-color: #5d8f53;
+			color:#fff;
+		}
+		#viande-cat {
+			background-color: #d9505c;
+			color:#fff;
+		}
+		#plat-cuisiné-cat {
+			background-color: #ff7ac2;
+			color:#fff;
+		}
+		#boisson-cat {
+			background-color: #95e89d;
+			color:#fff;
+		}
+		#biscuits-cat {
+			background-color: #ffba65;
+			color:#fff;
+		}
+		#apéro-cat {
+			background-color: peru;
+			color:#fff;
+		}
+
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 100%;
+			color:#888;
+			font-weight: 400;
+			background-color: #fff;
         }
 
 		.simple-table {
@@ -39,14 +126,29 @@
 			background-color: #888;
 		}
 
+		.graph-table>tbody>tr>td {
+			border-right: none;
+			border-left: none;
+			border-bottom: none;
+			border-color: #eee;
+		}
+		.graph-table>tbody>tr>td:nth-child(2) {
+			border-right: 1px solid #ddd;
+		}
+
         td, th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 0px 4px;
         }
 
+		thead>tr>td {
+			font-weight: 500;
+			padding: 4px;
+		}
+
         tr:nth-child(even) {
-            background-color: #f3f3f3;
+            background-color: #fafafa;
         }
         tr:hover{
             background-color:#ccc;

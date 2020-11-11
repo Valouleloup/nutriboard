@@ -3,28 +3,19 @@ class GraphTable extends React.Component {
         super(props);
     }
 
-    getRows(list) {
+    getAliments(list) {
         var items = [];
-        for(var key in list) {
-            items.push(<GraphFoodRow key={list[key]} food={scores[list[key]]}/>);
+        for(const [key, value] of Object.entries(list)) {
+            items.push(<GraphAliment key={key} items={value} type={key}/>);
         }
         return items;
     }
 
     render() {
         return (
-            <table className="simple-table">
-                <thead>
-                <tr>
-                    <td>Type</td>
-                    <td>Nom</td>
-                    <td>Nutriscore</td>
-                </tr>
-                </thead>
-                <tbody>
-                    {this.getRows(this.props.items)}
-                </tbody>
-            </table>
+            <div>
+                {this.getAliments(this.props.aliments)}
+            </div>
         );
     }
 }
@@ -63,11 +54,11 @@ class GraphNutriscoreCell extends React.Component {
         var offsetLeft = 10;
         return (
         <svg height="20" width="800">
-            <circle cx={(points*scale)+10*scale+offsetLeft} cy="12" r="6" stroke="black" stroke-width="0" fill={this.state.color} />
-            <rect x={10*scale} y="4" width="1" height="20" fill="#ddd" stroke-width="0" />
-            <rect x={13*scale} y="4" width="1" height="20" fill="#ddd" stroke-width="0" />
-            <rect x={21*scale} y="4" width="1" height="20" fill="#ddd" stroke-width="0" />
-            <rect x={29*scale} y="4" width="1" height="20" fill="#ddd" stroke-width="0" />
+            <circle cx={(points*scale)+10*scale+offsetLeft} cy="12" r="6" stroke="black" strokeWidth="0" fill={this.state.color} />
+            <rect x={10*scale} y="4" width="1" height="20" fill="#ddd" strokeWidth="0" />
+            <rect x={13*scale} y="4" width="1" height="20" fill="#ddd" strokeWidth="0" />
+            <rect x={21*scale} y="4" width="1" height="20" fill="#ddd" strokeWidth="0" />
+            <rect x={29*scale} y="4" width="1" height="20" fill="#ddd" strokeWidth="0" />
         </svg>
         );
     }
@@ -77,6 +68,53 @@ class GraphNutriscoreCell extends React.Component {
             <td className="simple-cell-nutriscore" style={{backgroundColor: 'white'}}>
                 <span>{this.getSvg(this.getPoint(this.props.nutripoint))}</span>
             </td>
+        );
+    }
+}
+
+class GraphAliment extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    getRows(list) {
+        var items = [];
+        console.log(list);
+        for(var key in list) {
+            items.push(<GraphFoodRow key={key} food={list[key]}/>);
+        }
+        return items;
+    }
+
+    getCategory(type) {
+        var names = {};
+        names['dessert'] = 'Desserts';
+        names['soupe'] = 'Soupes';
+        names['pain'] = 'Pain';
+        names['poisson'] = 'Poissons';
+        names['yaourt'] = 'Yaourts';
+        names['matiere-grasses'] = 'Matières grasses';
+        names['fromage'] = 'Fromages';
+        names['féculent'] = 'Féculents';
+        names['légumes'] = 'Légumes';
+        names['viande'] = 'Viandes';
+        names['plat-cuisiné'] = 'Plats cuisinés';
+        names['boisson'] = 'Boissons';
+        names['biscuits'] = 'Biscuits';
+        names['apéro'] = 'Apéro';
+        return names[type];
+    }
+
+    render() {
+        return (
+            <div>
+                <div className="category" id={this.props.type+'-cat'}>{this.getCategory(this.props.type)}</div>
+                <table className="graph-table">
+                    <tbody>
+                        {this.getRows(this.props.items)}
+                    </tbody>
+                </table>
+            </div>
         );
     }
 }
