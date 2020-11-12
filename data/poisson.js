@@ -155,5 +155,50 @@ var poissons = [
         },
         "origins": "",
         "labels_tags": []
+    },
+    {
+        "name": "Croustibat - Findus",
+        "id": "3599740009277",
+        "nutriscore": "a",
+        "nutriments": {
+          "fiber_100g": 0.5,
+          "saturated-fat_100g": 1,
+          "fat_100g": 8.4,
+          "sodium_100g": 0.22,
+          "nutrition-score-fr_100g": -1,
+          "proteins_100g": 12,
+          "carbohydrates_100g": 17,
+          "sugars_100g": 0.5,
+          "salt_100g": 0.55,
+          "energy-kcal_100g": 193,
+          "energy-kcal_value": 193,
+          "energy_100g": 808,
+          "nova-group_100g": 4,
+          "fruits-estimate_100g": 3.2
+        },
+        "nutriscore_data": {
+          "fruits_vegetables_nuts_colza_walnut_olive_oils": 3.2,
+          "energy": 808,
+          "positive_points": 5,
+          "negative_points": 4,
+          "score": -1,
+          "sodium_points": 2,
+          "fiber_points": 0,
+          "sugars_points": 0,
+          "proteins_points": 5,
+          "energy_points": 2,
+          "saturated_fat_points": 0,
+          "fruits_vegetables_nuts_colza_walnut_olive_oils_points": 0
+        },
+        "origins": "fr:ocean-pacifique-nord",
+        "labels_tags": [
+          "en:no-colorings",
+          "en:no-preservatives",
+          "en:palm-oil-free",
+          "en:sustainable-fishery",
+          "en:sustainable-seafood-msc",
+          "fr:info-tri-point-vert",
+          "fr:transforme-a-boulogne-sur-mer"
+        ]
     }
 ];

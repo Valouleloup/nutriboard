@@ -462,6 +462,43 @@ var biscuits = [
         }
     },
     {
+        "name": "Brioche Tranchée Nature - Harrys",
+        "id": "3265510000224",
+        "nutriscore": "d",
+        "nutriments": {
+          "fiber_100g": 2.5,
+          "saturated-fat_100g": 3.6,
+          "fat_100g": 9.1,
+          "sodium_100g": 0.444,
+          "nutrition-score-fr_100g": 11,
+          "proteins_100g": 8.4,
+          "carbohydrates_100g": 50.7,
+          "sugars_100g": 12,
+          "salt_100g": 1.11,
+          "energy-kcal_100g": 323,
+          "energy-kcal_value": 323,
+          "energy_100g": 1351,
+          "nova-group_100g": 4,
+          "fruits-estimate_100g": 0
+        },
+        "nutriscore_data": {
+          "fruits_vegetables_nuts_colza_walnut_olive_oils": 0,
+          "energy": 1351,
+          "positive_points": 2,
+          "negative_points": 13,
+          "score": 11,
+          "sodium_points": 4,
+          "fiber_points": 2,
+          "sugars_points": 2,
+          "proteins_points": 5,
+          "energy_points": 4,
+          "saturated_fat_points": 3,
+          "fruits_vegetables_nuts_colza_walnut_olive_oils_points": 0
+        },
+        "origins": "",
+        "labels_tags": []
+    },
+    {
         "name": "DooWap pépites choco sans additif",
         "id": "3228857001132",
         "nutriscore": "c",
