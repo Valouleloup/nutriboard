@@ -123,5 +123,56 @@ var soupes = [
             "en:sustainable-farming",
             "en:green-dot"
         ]
+    },
+    {
+        "name": "Gazpacho - Alvalle",
+        "id": "5410188031072",
+        "nutriscore": "a",
+        "nutriments": {
+          "fiber_100g": 1.2,
+          "saturated-fat_100g": 0.4,
+          "fat_100g": 2.6,
+          "sodium_100g": 0.244,
+          "nutrition-score-fr_100g": -4,
+          "proteins_100g": 0.8,
+          "carbohydrates_100g": 3.9,
+          "sugars_100g": 3.1,
+          "salt_100g": 0.61,
+          "energy-kcal_100g": 45,
+          "energy-kcal_value": 45,
+          "energy_100g": 187,
+          "energy-kj_100g": 187,
+          "nova-group_100g": 3,
+          "fruits-estimate_100g": 2.6
+        },
+        "nutriscore_data": {
+          "fruits_vegetables_nuts_colza_walnut_olive_oils": 93,
+          "energy": 187,
+          "positive_points": 6,
+          "negative_points": 2,
+          "score": -4,
+          "sodium_points": 2,
+          "fiber_points": 1,
+          "sugars_points": 0,
+          "proteins_points": 0,
+          "energy_points": 0,
+          "saturated_fat_points": 0,
+          "fruits_vegetables_nuts_colza_walnut_olive_oils_points": 5
+        },
+        "origins": "fr:legumes-espagne",
+        "labels_tags": [
+          "en:carbon-compensated-product",
+          "en:fsc",
+          "en:green-dot",
+          "en:made-in-spain",
+          "en:no-additives",
+          "en:no-colorings",
+          "en:no-preservatives",
+          "en:nutriscore",
+          "en:nutriscore-grade-a",
+          "en:fsc-c081801",
+          "fr:98-des-legumes-recoltes-a-la-main",
+          "fr:pack-eco-concu"
+        ]
     }
 ];

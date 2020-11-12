@@ -588,6 +588,42 @@ var platCuisine = [
         ]
     },
     {
+        "name": "Foie gras de Canard entier",
+        "id": "20096571",
+        "nutriscore": "e",
+        "nutriments": {
+          "saturated-fat_100g": 23.6,
+          "fat_100g": 56.1,
+          "sodium_100g": 0.508,
+          "nutrition-score-fr_100g": 21,
+          "proteins_100g": 7.5,
+          "carbohydrates_100g": 2.2,
+          "sugars_100g": 0.9,
+          "salt_100g": 1.27,
+          "energy-kcal_100g": 544,
+          "energy-kcal_value": 544,
+          "energy_100g": 2276,
+          "nova-group_100g": 3,
+          "fruits-estimate_100g": 0
+        },
+        "nutriscore_data": {
+          "fruits_vegetables_nuts_colza_walnut_olive_oils": 0,
+          "energy": 2276,
+          "positive_points": 0,
+          "negative_points": 21,
+          "score": 21,
+          "sodium_points": 5,
+          "fiber_points": 0,
+          "sugars_points": 0,
+          "proteins_points": 4,
+          "energy_points": 6,
+          "saturated_fat_points": 10,
+          "fruits_vegetables_nuts_colza_walnut_olive_oils_points": 0
+        },
+        "origins": "en:france",
+        "labels_tags": []
+    },
+    {
         "name": "Quiche Lorraine - Marie",
         "id": "3240782040000",
         "nutriscore": "d",
